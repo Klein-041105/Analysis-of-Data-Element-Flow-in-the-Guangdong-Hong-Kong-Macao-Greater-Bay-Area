@@ -1,2 +1,2 @@
 # Analysis-of-Data-Element-Flow-in-the-Guangdong-Hong-Kong-Macao-Greater-Bay-Area
-In the era of digital economy, the importance of data as a new production factor is increasingly prominent. As a special area of "one country, two systems, three legal jurisdictions and four customs territories", the Guangdong-Hone Kong-Macao Greater Bay Area is confronted with some complex issues.
+数字经济时代，数据作为新型生产要素的重要性日益凸显。粤港澳大湾区作为"一国两制三法域四关税区"的特殊区域，在数据要素跨境流动方面面临制度异质性、技术标准差异、安全监管挑战等复杂问题。本项目通过多元统计分析、空间计量经济学、网络科学、机器学习等前沿方法，对粤港澳大湾区数据要素跨境流动进行深入的量化研究。

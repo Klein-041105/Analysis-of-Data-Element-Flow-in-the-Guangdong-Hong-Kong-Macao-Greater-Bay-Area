@@ -1,0 +1,86 @@
+# 项目基本配置
+project:
+  name: "粤港澳大湾区数据要素流动分析"
+  cities: ["广州", "深圳", "珠海", "佛山", "惠州", "东莞", "中山", "江门", "肇庆", "香港", "澳门"]
+  start_year: 2019
+  end_year: 2023
+  random_seed: 42
+
+# 数据路径配置
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  interim_data: "data/interim/"
+  external_data: "data/external/"
+  figures: "outputs/figures/"
+  tables: "outputs/tables/"
+  models: "outputs/models/"
+  reports: "outputs/reports/"
+
+# 数据预处理配置
+preprocessing:
+  missing_values:
+    methods: ["mice", "knn", "time_series", "autoencoder"]
+    knn_neighbors: 5
+    mice_imputations: 5
+    test_size: 0.2
+  
+  outliers:
+    methods: ["grubbs", "isolation_forest", "arima_residual", "stl"]
+    contamination: 0.05
+    alpha: 0.05
+  
+  normalization:
+    methods: ["zscore", "minmax", "log", "boxcox", "yeojohnson"]
+    target_columns: ["all"]
+  
+  multicollinearity:
+    vif_threshold: 10
+    correlation_threshold: 0.8
+
+# PCA配置
+pca:
+  kaiser_threshold: 1.0
+  variance_threshold: 0.85
+  rotation: "varimax"
+  bootstrap_n: 500
+  robust: true
+  kernel: "rbf"
+
+# 聚类配置
+clustering:
+  algorithms: ["kmeans", "hierarchical", "dbscan", "gmm", "spectral", "fcm"]
+  k_range: [2, 10]
+  linkage_methods: ["ward", "complete", "average"]
+  dbscan_eps: 0.5
+  dbscan_min_samples: 5
+  validation_metrics: ["silhouette", "calinski_harabasz", "davies_bouldin", "gap_statistic"]
+  bootstrap_n: 100
+
+# 空间分析配置
+spatial:
+  weight_matrices: ["rook", "queen", "distance", "economic", "knn"]
+  knn_k: [3, 5, 8]
+  moran_permutations: 999
+  models: ["slm", "sem", "sdm", "gwr"]
+
+# 网络分析配置
+network:
+  centrality_metrics: ["degree", "closeness", "betweenness", "eigenvector", "pagerank", "hits"]
+  community_algorithms: ["louvain", "girvan_newman"]
+  layout: ["force", "circular"]
+
+# 机器学习配置
+ml:
+  time_series_models: ["arima", "sarima", "ets", "prophet", "var", "lstm"]
+  regression_models: ["linear", "ridge", "lasso", "rf", "xgboost", "lightgbm", "svr", "mlp"]
+  cv_folds: 5
+  test_size: 0.2
+  hyperparameter_search: "bayesian"
+  shap_analysis: true
+
+# 因果推断配置
+causal:
+  methods: ["did", "psm", "rdd", "scm"]
+  placebo_tests: true
+  parallel_trend: true

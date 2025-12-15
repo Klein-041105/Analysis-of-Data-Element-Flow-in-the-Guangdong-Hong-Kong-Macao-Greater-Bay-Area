@@ -1,68 +1,48 @@
-# 基础数据处理
-pandas>=2.1.0
-numpy>=1.25.0
-scipy>=1.11.0
-openpyxl>=3.1.0
-xlrd>=2.0.1
+# Core
+python>=3.10,<3.12
+numpy>=1.24
+pandas>=2.1
+scipy>=1.10
+scikit-learn>=1.2
+statsmodels>=0.14
+matplotlib>=3.7
+seaborn>=0.12
 
-# 统计分析
-statsmodels>=0.14.0
-scikit-learn>=1.3.0
-factor-analyzer>=0.5.1
-pingouin>=0.5.3
-pysal>=4.7.0
-libpysal>=4.9.0
-spreg>=1.4.0
-esda>=2.4.0
-giddy>=2.3.0
-
-# 机器学习
-xgboost>=2.0.0
-lightgbm>=4.0.0
-catboost>=1.2.0
-tensorflow>=2.13.0
-keras>=2.13.0
-
-# 网络分析
+# Spatial & network
+libpysal>=4.5
+geopandas>=0.13
+shapely>=2.0
 networkx>=3.1
-python-louvain>=0.16
-igraph>=0.10.6
 
-# 可视化
-matplotlib>=3.7.0
-seaborn>=0.12.0
-plotly>=5.16.0
-geopandas>=0.13.0
-folium>=0.14.0
-pygal>=3.0.0
-sankeyflow>=0.0.5
-adjustText>=0.7.3
+# ML & DL
+xgboost>=1.7
+lightgbm>=4.4
+catboost>=1.1
+tensorflow>=2.12;  # optional, for LSTM (user may skip)
+torch>=2.0;     # optional
 
-# 数据插补
-fancyimpute>=0.7.0
-missingno>=0.5.2
+# Imputation & time series
+fancyimpute>=0.7
+pmdarima>=2.2
+prophet>=1.1
 
-# 工程化
-pyyaml>=6.0.1
-click>=8.1.0
-loguru>=0.7.0
-tqdm>=4.65.0
-joblib>=1.3.0
-cachetools>=5.3.1
+# Model explainability
+shap>=0.41
+lime>=0.2
 
-# 代码质量
-black>=23.7.0
-pylint>=2.17.0
-mypy>=1.5.0
-pytest>=7.4.0
-pytest-cov>=4.1.0
+# Utilities & engineering
+pyyaml>=6.0
+jsonschema>=4.19
+joblib>=1.3
+tqdm>=4.66
+loguru>=0.7
+python-dotenv>=1.0
 
-# 文档生成
-sphinx>=7.1.0
-sphinx-rtd-theme>=1.3.0
-docstring-parser>=0.15.0
+# Testing & linting
+pytest>=7.3
+pytest-cov>=4.0
+black>=24.3
+mypy>=1.5
 
-# 其他工具
-pyarrow>=12.0.0
-fastparquet>=2023.7.0
-python-dotenv>=1.0.0
+# Optional
+rpy2>=3.6  # optional if interfacing with R

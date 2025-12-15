@@ -1,0 +1,75 @@
+{
+  "indicators": {
+    "data_flow": [
+      "cross_border_inbound_tb",
+      "cross_border_outbound_tb",
+      "data_centers_count",
+      "server_racks",
+      "data_center_pue",
+      "internet_export_bandwidth_international_gbps",
+      "internet_export_bandwidth_mainland_gbps",
+      "internet_export_bandwidth_hk_mo_gbps",
+      "cloud_iaas_usage",
+      "cloud_paas_usage",
+      "cloud_saas_usage",
+      "api_calls_government",
+      "api_calls_finance",
+      "api_calls_health",
+      "api_calls_ecommerce",
+      "data_trade_volume",
+      "data_trade_transactions",
+      "data_asset_registry_count",
+      "blockchain_storage_count",
+      "security_certified_companies",
+      "cross_border_compliance_incidents",
+      "data_exit_security_assessments",
+      "personal_data_complaints"
+    ],
+    "economic": [
+      "gdp",
+      "gdp_per_capita",
+      "gdp_growth_rate",
+      "digital_economy_value_added",
+      "industry_1_share",
+      "industry_2_share",
+      "industry_3_share",
+      "trade_dependency_ratio",
+      "fdi_actual",
+      "cross_border_ecommerce",
+      "fintech_transaction_volume",
+      "unicorn_total_valuation",
+      "listed_companies_count",
+      "market_cap_total"
+    ],
+    "innovation": [
+      "rnd_expenditure",
+      "rnd_intensity",
+      "patent_inventions",
+      "pct_patent_count",
+      "high_tech_enterprises_count",
+      "smes_tech_count",
+      "gazelle_companies_count",
+      "tech_talent_total",
+      "tech_talent_share",
+      "tech_contract_value",
+      "national_innovation_platforms",
+      "new_phd_masters_count"
+    ],
+    "infrastructure": [
+      "5g_base_station_density",
+      "5g_coverage",
+      "gbps_fiber_coverage",
+      "compute_capacity_flops",
+      "iot_connections",
+      "industrial_iot_id_resolutions",
+      "smart_city_index",
+      "e_gov_index",
+      "network_security_incidents"
+    ]
+  },
+  "od_matrix":
+    {
+      "years": [2019, 2020, 2021, 2022, 2023],
+      "matrix_type": ["data_transmission_tb", "api_calls", "coop_projects_count"]
+    }
+}

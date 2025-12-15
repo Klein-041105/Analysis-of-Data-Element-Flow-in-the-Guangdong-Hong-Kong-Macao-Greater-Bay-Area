@@ -1,0 +1,45 @@
+# 模型参数（默认值，可在运行时覆盖）
+imputation:
+  mice:
+    n_iter: 10
+    random_state: 42
+  knn:
+    n_neighbors: 5
+    weights: "uniform"
+  autoencoder:
+    latent_dim: 8
+    epochs: 100
+    batch_size: 32
+
+pca:
+  n_components: null
+  whiten: false
+
+clustering:
+  kmeans:
+    n_init: 20
+    max_iter: 300
+    random_state: 42
+  dbscan:
+    eps: 0.5
+    min_samples: 5
+  gmm:
+    n_components: null
+    covariance_type: "full"
+
+spatial:
+  k_neighbors: [3, 5, 8]
+  monte_carlo: 999
+
+ml:
+  random_forest:
+    n_estimators: 200
+    max_depth: null
+    random_state: 42
+  xgboost:
+    n_estimators: 200
+    learning_rate: 0.05
+    max_depth: 6
+  cross_validation:
+    cv: 5
+    scoring: "neg_root_mean_squared_error"
